@@ -1,0 +1,67 @@
+.dialog {
+    display: none;
+}
+
+.splash_ul {
+    list-style-type: none;
+}
+
+.splash_li {
+    text-decoration:none;
+    text-align:center;
+    color:#D22018;
+    font-family:Trebuchet MS;
+    font-size:14px;
+    font-weight:bold;
+    font-style:normal;
+    line-height:25px;
+    text-shadow:1px 1px 0px #ffffff;
+}
+
+.splash_button_wrapper {
+    text-decoration:none;
+    text-align:center;
+    color:#D22018;
+    font-family:Trebuchet MS;
+    font-size:14px;
+    font-weight:bold;
+    font-style:normal;
+    line-height:25px;
+    text-shadow:1px 1px 0px #ffffff;
+    width:110px;
+}
+
+.splash_button {
+    text-decoration:none;
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+    background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+    background-color:#ededed;
+    -webkit-border-top-left-radius:9px;
+    -moz-border-radius-topleft:9px;
+    border-top-left-radius:9px;
+    -webkit-border-top-right-radius:9px;
+    -moz-border-radius-topright:9px;
+    border-top-right-radius:9px;
+    -webkit-border-bottom-right-radius:9px;
+    -moz-border-radius-bottomright:9px;
+    border-bottom-right-radius:9px;
+    -webkit-border-bottom-left-radius:9px;
+    -moz-border-radius-bottomleft:9px;
+    border-bottom-left-radius:9px;
+    text-indent:0;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    color:#D22018;
+    font-family:Trebuchet MS;
+    font-size:14px;
+    font-weight:bold;
+    font-style:normal;
+    padding-top:10px;
+    /*margin-left: 20px;
+    margin-right:20px;
+    margin-bottom:50px;*/
+}

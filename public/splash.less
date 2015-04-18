@@ -1,0 +1,77 @@
+@lighter-grey: #ededed;
+@light-grey: #dfdfdf;
+@white: #fff;
+
+.no_display {
+    display: none;
+}
+
+.dialog {
+    .no_display;
+}
+
+.splash_button_container {
+    width: 100%;
+}
+
+.splash_button_container > ul {
+    list-style-type: none;
+}
+
+.splash_button_item {
+    text-align: center;
+    text-shadow: 1px 1px 0px @white;
+    width: 100px;
+    display: inline-block;
+}
+
+.splash_button {
+    -moz-box-shadow:inset 0px 1px 0px 0px @white;
+    -webkit-box-shadow:inset 0px 1px 0px 0px @white;
+    box-shadow:inset 0px 1px 0px 0px @white;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, @lighter-grey) );
+    background:-moz-linear-gradient( center top, @lighter-grey );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=@lighter-grey, endColorstr=@light-grey);
+    background-color:@lighter-grey;
+    -webkit-border-top-left-radius:9px;
+    -moz-border-radius-topleft:9px;
+    border-top-left-radius:9px;
+    -webkit-border-top-right-radius:9px;
+    -moz-border-radius-topright:9px;
+    border-top-right-radius:9px;
+    -webkit-border-bottom-right-radius:9px;
+    -moz-border-radius-bottomright:9px;
+    border-bottom-right-radius:9px;
+    -webkit-border-bottom-left-radius:9px;
+    -moz-border-radius-bottomleft:9px;
+    border-bottom-left-radius:9px;
+    text-indent:0;
+    border:1px solid #dcdcdc;
+    color:#D22018;
+    height:80px;
+    width: 100px;
+    text-align:center;
+    text-shadow:1px 1px 0px @white;
+    padding-top:5px;
+    margin-bottom:5px;
+}
+
+.splash_button:hover {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, @light-grey), color-stop(1, @lighter-grey) );
+    background: -moz-linear-gradient( center top, @light-grey 5%, @lighter-grey );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@light-grey', endColorstr='@lighter-grey');
+    background-color:@light-grey;
+}
+
+.splash_button:active {
+    position:relative;
+    top:1px;
+}
+
+.splash_button_text {
+    font-family:Trebuchet MS;
+    font-size:10px;
+    font-weight:bold;
+    font-style:normal;
+    line-height:1em;
+}

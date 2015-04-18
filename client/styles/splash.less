@@ -1,0 +1,230 @@
+/* https://css-tricks.com/snippets/css/useful-css3-less-mixins/  */
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius:    @radius;
+    border-radius:         @radius;
+
+    // -moz-background-clip:    padding;
+    // -webkit-background-clip: padding-box;
+    // background-clip:         padding-box;
+}
+
+.background-gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=@startColor, endColorstr=@light-grey);
+}
+
+@lighter-grey: #ededed;
+@light-grey: #dfdfdf;
+@white: #fff;
+@button-width: 105px;
+@button-height: 90px;
+@red: #D22018;
+.main-font (@size: 12pt) {
+    font-family: "Georgia";
+    font-size: @size;
+}
+.sans-serif-font(@size: 12pt) {
+    font-family: "Roboto Condensed";
+    font-size: @size;    
+}
+.ui-font {
+    .sans-serif-font(12px);
+}
+
+@body-margin: 50px;
+@dark-grey: #555;
+
+@import 'custom.bootstrap.import.less';
+@import 'custom.bootstrap.mixins.import.less';
+@import 'custom.bootstrap-switch.import.less';
+
+body {
+    .main-font(12pt);
+    color:@red;
+    background-color:@lighter-grey;
+    margin: @body-margin;
+}
+
+
+a:visited {
+    color: @red;
+}
+
+a {
+    text-decoration: none;
+    color: @red;
+}
+
+.no-display {
+    display: none;
+}
+
+.button-info{
+    .no-display;
+}
+
+#splash_button_container {
+    width: 100%;
+}
+
+.splash_button_container > ul {
+    list-style-type: none;
+}
+
+.splash_button_item {
+    text-align: center;
+    text-shadow: 1px 1px 0px @white;
+    width: @button-width;
+    height: @button-height;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.light-border {
+    border: 1px solid @light-grey;
+}
+
+.dark-border {
+    border: 1px solid @dark-grey;
+}
+
+.splash_button {
+    .box-shadow(inset 0px 1px 0px 0px @white);
+    .background-gradient(@lighter-grey, @light-grey);
+    .border-radius(9px);
+    .light-border;
+    color: @red;
+    font-size:14pt;
+    height:@button-height;
+    width: @button-width;
+    text-align:center;
+    text-shadow:1px 1px 0px @white;
+    padding-top:3px;
+    padding-bottom: 5px;
+    margin-bottom:5px;
+    display:inline-block;
+}
+
+.splash_button:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, @light-grey), color-stop(1, @lighter-grey) );
+    background:-moz-linear-gradient( center top, @light-grey 5%, @lighter-grey );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=@light-grey, endColorstr=@lighter-grey);
+    background-color:@light-grey;
+    cursor: move;
+}
+
+.splash_button:active {
+    position:relative;
+    top:1px;
+}
+
+.splash_button_text {
+    .ui-font;
+    font-weight:bold;
+    font-style:normal;
+    line-height:1em;
+}
+
+splash_button_text_input {
+    .ui-font;
+    font-weight:bold;
+    font-style:normal;
+    line-height:1em;
+    width: 100%;
+}
+
+// The jboxes
+
+.jBox-container {    
+
+    .background-gradient(@lighter-grey, @light-grey);
+    .border-radius(9px);
+
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+
+    text-indent:0;
+    border:1px solid @red + #111;
+    font-size:9pt;
+    min-width:140px;
+
+    cursor: pointer;
+}
+
+.jBox-pointer:after {
+    background: #eee;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    .ui-font;
+    .dark-border;
+    background: #eee;
+    color: @red;
+}
+
+.ui-tabs {
+    background: @white;
+    cursor: default;
+}
+
+*:focus {
+    outline: none;
+}
+
+.ui-tabs-nav {
+    .ui-font;
+    .light-border;
+    color: @red;
+}
+
+.ui-helper-reset {
+    outline: none;
+    box-shadow: none;
+}
+
+.ui-widget-header {
+    background: @light-grey;
+}
+
+
+.ui-widget-content {
+    color: @red;
+    border: 1px solid @light-grey;
+}
+
+.ui-widget-content #settings {
+    color: @dark-grey;
+}
+
+.ui-dialog-titlebar {
+    background: @dark-grey;
+    border: 1px solid @dark-grey;
+}
+
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
+.ui-button-text {
+    color: @dark-grey;
+}
+
+.bootstrap-switch-id-edit_button {
+    .ui-font;
+    .light-border;
+    margin-bottom: 20px;
+    height: 28px;
+}
+

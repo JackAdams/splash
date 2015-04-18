@@ -1,0 +1,45 @@
+<template name="tabs">
+
+	<input data-size="small" class="bootstrap-switch" id="edit_button" type="checkbox" value="1">
+
+	<div class="button-info">
+		{{# each buttons "Group"}}
+		<!-- This doesn't have to be in its own template -->
+		<div id="splash_button_title_{{index}}"><i class="fa fa-fw fa-{{icon}}"></i>&nbsp;{{display}}</div>
+		<div id="splash_button_submenu_{{index}}"><ul><li>{{index}}</li></ul></div>
+		{{/each}}
+	</div>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#Group">Group</a></li>
+			<li><a href="#settings">Settings</a></li>
+		</ul>
+
+		<div id="Group">
+			<div id="splash_button_container">
+				{{# each buttons "Group"}}
+					{{> doButtons }}
+				{{/each}} 
+			</div>
+		</div>
+
+		<div id="settings">
+		 <form id="icon_size_form">
+		  <br /><strong>Button Size:</strong><br />
+		  <input type="radio" name="icon_size" id="larger_icons" value="+1" />
+		  <label for="larger_icons">Larger Icons, with title</label><br />
+
+		  <input type="radio" name="icon_size" id="smaller_icons" value="-1" />
+		  <label for="smaller_icons">Smaller Icons, without title</label>
+		 </form>
+		 <form id="new_tab_form">
+		  <br /><strong>On Click:</strong><br />
+		  <input id="new_tab_checkbox" type="checkbox" name="new_tab" />
+		  <label for="new_tab_checkbox">Open in a new tab</label>
+		 </form>
+		</div>
+
+	</div>
+
+</template>
